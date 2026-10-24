@@ -64,6 +64,7 @@ public/workbox-*.js.map
 /.claude
 /.codex
 /.vscode
+/.workbuddy
 # SQLite 开发数据库
 .data/
 *.db
