@@ -4,6 +4,13 @@ compatibility_flags = ["nodejs_compat"]
 main = ".open-next/worker.js"
 minify = true
 
+# 自定义域名路由（milktvp.cc.cd 已托管在同账号 Cloudflare）
+# 关闭 workers_dev 后，wrangler 不再要求注册 workers.dev 子域名
+workers_dev = false
+routes = [
+  { pattern = "milktvp.cc.cd/*", zone_name = "milktvp.cc.cd" }
+]
+
 # 静态资源配置
 # Cloudflare Workers Assets 用于服务静态文件
 [assets]
